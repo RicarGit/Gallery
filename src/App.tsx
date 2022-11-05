@@ -3,7 +3,9 @@ import * as Photos from './services/photos'
 
 import { useState, useEffect, FormEvent } from 'react'
 import { Photo } from './types/Photo'
+
 import { PhotoItem } from './components/PhotoItem'
+import { ScreenWarning } from './components/ScreenWarning'
 
 export function App() {
   const [uploading, setUploading] = useState(false)
@@ -53,10 +55,9 @@ export function App() {
         </S.UploadForm>
 
         {loading &&
-          <S.ScreenWarning>
-            <div className="emoji">😴</div>
-            <div>Carregando...</div>
-          </S.ScreenWarning>
+          <ScreenWarning emoji='⌛️'>
+            Carregando...
+          </ScreenWarning>
         }
 
         {!loading && photos.length > 0 &&
@@ -68,10 +69,9 @@ export function App() {
         }
 
         {!loading && photos.length === 0 &&
-          <S.ScreenWarning>
-            <div className="emoji">🤔</div>
-            <div>Não há fotos cadastradas...</div>
-          </S.ScreenWarning>
+          <ScreenWarning emoji='🤔'>
+            Não há fotos cadastradas...
+          </ScreenWarning>
         }
       </S.Area>
     </S.Container >
