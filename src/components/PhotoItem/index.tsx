@@ -1,4 +1,4 @@
-import { Photo } from '../../types/Photo'
+import { Photo } from 'types/Photo'
 import * as S from './styles'
 
 export const PhotoItem = ({ url, name }: Photo) => {
