@@ -1,7 +1,7 @@
 import { Validate } from "types/Validate"
 import { getFileName } from "./getFileName"
 
-export const validateFile = ({ file, photos, e }: Validate) => {
+export const fileValidator = ({ file, photos, e }: Validate) => {
   const fileName = getFileName(file)
 
   if (file.size <= 0) {

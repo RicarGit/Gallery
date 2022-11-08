@@ -6,7 +6,7 @@ import { Photo } from './types/Photo'
 
 import { PhotoItem } from './components/PhotoItem'
 import { ScreenWarning } from './components/ScreenWarning'
-import { validateFile } from 'utils/validateFile'
+import { fileValidator } from 'utils/fileValidator'
 
 export function App() {
   const [uploading, setUploading] = useState(false)
@@ -28,7 +28,7 @@ export function App() {
 
     const formData = new FormData(e.currentTarget)
     const file = formData.get('image') as File
-    const isFileValid = validateFile({ file, photos, e })
+    const isFileValid = fileValidator({ file, photos, e })
 
     if (file && isFileValid) {
       setUploading(true)
