@@ -2,6 +2,7 @@ import * as S from './App.styles'
 import * as Photos from './services/photos'
 
 import { useState, useEffect, FormEvent } from 'react'
+import { getFileName } from 'utils/getFileName'
 import { Photo } from './types/Photo'
 
 import { PhotoItem } from './components/PhotoItem'
@@ -27,6 +28,16 @@ export function App() {
 
     const formData = new FormData(e.currentTarget)
     const file = formData.get('image') as File
+    const fileName = getFileName(file)
+
+    const hasSameName = photos.find(photo => {
+      return photo.name === fileName
+    })
+
+    if (hasSameName) {
+      e.currentTarget.reset()
+      return alert('O nome do arquivo já existe.')
+    }
 
     if (file && file.size > 0) {
       setUploading(true)
@@ -37,6 +48,7 @@ export function App() {
         alert(`${result.name} - ${result.message}`)
       } else {
         let newPhotoList = [...photos]
+
         newPhotoList.push(result)
         setPhotos(newPhotoList)
       }
