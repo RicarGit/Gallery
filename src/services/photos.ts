@@ -24,16 +24,15 @@ export const getAllPhotos = async () => {
 
 export const insertImage = async (file: File) => {
   const fileName = getFileName(file)
+  const form = document.querySelector('form')
+  const isAValidImageExtension = file.type.match(/\/png$|\/jpg$|\/jpeg$/g)
 
-  if (fileName.length >= 30) {
-    return new Error('Nome do arquivo muito grande, máximo permitido de 30 caracteres')
-  }
+  if (isAValidImageExtension) {
+    const newFile = ref(storage, `images/${fileName}`)
 
-  if (file.type.match(/\/png$|\/jpg$|\/jpeg$/g)) {
-    let newFile = ref(storage, `images/${fileName}`)
-
-    let upload = await uploadBytes(newFile, file)
-    let photoURL = await getDownloadURL(upload.ref)
+    const upload = await uploadBytes(newFile, file)
+    const photoURL = await getDownloadURL(upload.ref)
+    form?.reset()
 
     return {
       name: upload.ref.name,
@@ -41,5 +40,6 @@ export const insertImage = async (file: File) => {
     }
   }
 
+  form?.reset()
   return new Error('Tipo de arquivo não permitido, somente arquivos jpg, jpeg ou png')
 }

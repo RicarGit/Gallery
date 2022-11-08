@@ -2,11 +2,11 @@ import * as S from './App.styles'
 import * as Photos from './services/photos'
 
 import { useState, useEffect, FormEvent } from 'react'
-import { getFileName } from 'utils/getFileName'
 import { Photo } from './types/Photo'
 
 import { PhotoItem } from './components/PhotoItem'
 import { ScreenWarning } from './components/ScreenWarning'
+import { validateFile } from 'utils/validateFile'
 
 export function App() {
   const [uploading, setUploading] = useState(false)
@@ -28,18 +28,9 @@ export function App() {
 
     const formData = new FormData(e.currentTarget)
     const file = formData.get('image') as File
-    const fileName = getFileName(file)
+    const isFileValid = validateFile({ file, photos, e })
 
-    const hasSameName = photos.find(photo => {
-      return photo.name === fileName
-    })
-
-    if (hasSameName) {
-      e.currentTarget.reset()
-      return alert('O nome do arquivo já existe.')
-    }
-
-    if (file && file.size > 0) {
+    if (file && isFileValid) {
       setUploading(true)
       let result = await Photos.insertImage(file)
       setUploading(false)
