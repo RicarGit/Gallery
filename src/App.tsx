@@ -1,17 +1,25 @@
 import * as S from './App.styles'
-import { api } from './services/api'
-
 import { useState, useEffect, FormEvent } from 'react'
 import { Photo } from './types/Photo'
 
 import { PhotoItem } from './components/PhotoItem'
 import { ScreenWarning } from './components/ScreenWarning'
+
 import { fileValidator } from 'utils/fileValidator'
+import { api } from './services/api'
 
 export function App() {
   const [uploading, setUploading] = useState(false)
   const [loading, setLoading] = useState(false)
   const [photos, setPhotos] = useState<Photo[]>([])
+
+  const inputSubmit = document.querySelector("input[type=submit]")
+
+  if (inputSubmit && (loading || uploading)) {
+    inputSubmit.setAttribute('disabled', '')
+  } else {
+    inputSubmit?.removeAttribute('disabled')
+  }
 
   useEffect(() => {
     const getPhotos = async () => {

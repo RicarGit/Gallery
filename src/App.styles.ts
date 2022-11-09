@@ -44,4 +44,10 @@ export const UploadForm = styled.form`
       opacity: .8;
     }
   }
+
+  input[disabled],
+  input[disabled]:hover {
+    opacity: .2;
+    cursor: default;
+  }
 `
