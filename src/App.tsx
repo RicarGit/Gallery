@@ -1,5 +1,5 @@
 import * as S from './App.styles'
-import * as Photos from './services/photos'
+import { api } from './services/api'
 
 import { useState, useEffect, FormEvent } from 'react'
 import { Photo } from './types/Photo'
@@ -16,7 +16,7 @@ export function App() {
   useEffect(() => {
     const getPhotos = async () => {
       setLoading(true)
-      setPhotos(await Photos.getAllPhotos())
+      setPhotos(await api.getAllPhotos())
       setLoading(false)
     }
 
@@ -32,7 +32,7 @@ export function App() {
 
     if (file && isFileValid) {
       setUploading(true)
-      let result = await Photos.insertImage(file)
+      let result = await api.insertImage(file)
       setUploading(false)
 
       if (result instanceof Error) {
