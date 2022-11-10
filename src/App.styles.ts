@@ -26,6 +26,7 @@ export const PhotoList = styled.div`
 `
 
 export const UploadForm = styled.form`
+  display: flex;
   background-color: #3D3F43;
   padding: 15px;
   border-radius: 10px;
@@ -35,14 +36,22 @@ export const UploadForm = styled.form`
     background-color: #756DF4;
     border: none;
     color: #fff;
-    padding: 8px 16px;
-    margin: 0 20px;
+    font-weight: bold;
+    padding: 0 25px;
+    margin-left: 15px;
     border-radius: 5px;
     cursor: pointer;
 
     &:hover {
       opacity: .8;
     }
+  }
+  
+  input[type=file] {
+    background: #000;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
   }
 
   input[disabled],
