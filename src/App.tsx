@@ -74,7 +74,7 @@ export function App() {
         {!loading && photos.length > 0 &&
           <S.PhotoList>
             {photos.map(({ url, name }, index) => (
-              <PhotoItem key={index} url={url} name={name} />
+              <PhotoItem key={index} url={url} name={name} photos={photos} setPhotos={setPhotos} />
             ))}
           </S.PhotoList>
         }

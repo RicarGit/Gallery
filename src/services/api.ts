@@ -1,5 +1,5 @@
 import { storage } from "libs/firebase"
-import { ref, listAll, getDownloadURL, uploadBytes } from "firebase/storage"
+import { ref, listAll, getDownloadURL, uploadBytes, deleteObject } from "firebase/storage"
 
 import { Photo } from "types/Photo"
 import { getFileName } from "utils/getFileName"
@@ -44,5 +44,10 @@ export const api = {
 
     form?.reset()
     return new Error('Tipo de arquivo não permitido, somente arquivos jpg, jpeg ou png')
+  },
+
+  deleteImage(fileName: string) {
+    const imagesFolder = ref(storage, `images/${fileName}`)
+    deleteObject(imagesFolder)
   }
 }
