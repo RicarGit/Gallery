@@ -2,7 +2,7 @@ import * as S from './App.styles'
 import { useState, useEffect, FormEvent } from 'react'
 import { Photo } from './types/Photo'
 
-import { PhotoItem } from './components/PhotoItem'
+import { PhotoCard } from './components/PhotoCard'
 import { ScreenWarning } from './components/ScreenWarning'
 
 import { fileValidator } from 'utils/fileValidator'
@@ -74,7 +74,7 @@ export function App() {
         {!loading && photos.length > 0 &&
           <S.PhotoList>
             {photos.map(({ url, name }, index) => (
-              <PhotoItem key={index} url={url} name={name} photos={photos} setPhotos={setPhotos} />
+              <PhotoCard key={index} url={url} name={name} photos={photos} setPhotos={setPhotos} />
             ))}
           </S.PhotoList>
         }

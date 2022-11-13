@@ -15,16 +15,13 @@ export const Container = styled.div`
     border-radius: 10px;
   }
 
-  .remove-icon {
+  .delete-icon {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
+    bottom: 0;
     right: 0;
-    padding: 10px;
-    background: #3D3F43;
-    border-radius: 10px;
+    height: 25px;
+    width: 25px;
+    margin: 15px;
     cursor: pointer;
   }
 `
