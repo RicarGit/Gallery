@@ -48,6 +48,9 @@ export const api = {
 
   deleteImage(fileName: string) {
     const imagesFolder = ref(storage, `images/${fileName}`)
+
     deleteObject(imagesFolder)
+      .then(() => alert(`arquivo ${fileName} deletado com sucesso!`))
+      .catch(() => alert(`Ops, erro ao deletar arquivo, tente novamente.`))
   }
 }
