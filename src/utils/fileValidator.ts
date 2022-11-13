@@ -8,9 +8,9 @@ export const fileValidator = ({ file, photos, e }: Validate) => {
     return alert('Selecione algum arquivo jpg, jpeg ou png para fazer upload.')
   }
 
-  if (fileName.length >= 30) {
+  if (fileName.length >= 25) {
     e.currentTarget.reset()
-    return alert('Nome do arquivo muito grande, máximo permitido de 30 caracteres.')
+    return alert('Nome do arquivo muito grande, máximo permitido de 25 caracteres.')
   }
 
   const hasSameName = photos.find(photo => {
