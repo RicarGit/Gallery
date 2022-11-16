@@ -66,23 +66,25 @@ export function App() {
         </S.UploadForm>
 
         {loading &&
-          <ScreenWarning emoji='⌛️'>
-            Carregando...
-          </ScreenWarning>
+          <ScreenWarning emoji='⌛️'>Carregando...</ScreenWarning>
         }
 
         {!loading && photos.length > 0 &&
           <S.PhotoList>
             {photos.map(({ url, name }, index) => (
-              <PhotoCard key={index} url={url} name={name} photos={photos} setPhotos={setPhotos} />
+              <PhotoCard
+                key={index}
+                url={url}
+                name={name}
+                photos={photos}
+                setPhotos={setPhotos}
+              />
             ))}
           </S.PhotoList>
         }
 
         {!loading && photos.length === 0 &&
-          <ScreenWarning emoji='🤔'>
-            Não há fotos cadastradas...
-          </ScreenWarning>
+          <ScreenWarning emoji='🤔'>Não há fotos cadastradas...</ScreenWarning>
         }
       </S.Area>
     </S.Container >
