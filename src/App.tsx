@@ -31,12 +31,12 @@ export function App() {
     getPhotos()
   }, [])
 
-  const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
 
-    const formData = new FormData(e.currentTarget)
+    const formData = new FormData(event.currentTarget)
     const file = formData.get('image') as File
-    const isFileValid = fileValidator({ file, photos, e })
+    const isFileValid = fileValidator({ file, photos, event })
 
     if (file && isFileValid) {
       setUploading(true)

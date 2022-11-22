@@ -1,7 +1,7 @@
 import { Validate } from "types/Validate"
 import { getFileName } from "./getFileName"
 
-export const fileValidator = ({ file, photos, e }: Validate) => {
+export const fileValidator = ({ file, photos, event }: Validate) => {
   const fileName = getFileName(file)
 
   if (file.size <= 0) {
@@ -9,7 +9,7 @@ export const fileValidator = ({ file, photos, e }: Validate) => {
   }
 
   if (fileName.length >= 25) {
-    e.currentTarget.reset()
+    event.currentTarget.reset()
     return alert('Nome do arquivo muito grande, máximo permitido de 25 caracteres.')
   }
 
@@ -18,7 +18,7 @@ export const fileValidator = ({ file, photos, e }: Validate) => {
   })
 
   if (hasSameName) {
-    e.currentTarget.reset()
+    event.currentTarget.reset()
     return alert('O nome do arquivo já existe.')
   }
 
