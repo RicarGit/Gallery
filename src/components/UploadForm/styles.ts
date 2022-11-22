@@ -7,6 +7,10 @@ export const Form = styled.form`
   border-radius: 10px;
   margin-bottom: 30px;
 
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+
   input[type=submit] {
     background-color: #756DF4;
     border: none;
@@ -20,6 +24,13 @@ export const Form = styled.form`
     &:hover {
       opacity: .8;
     }
+
+    @media (max-width: 500px) {
+      width: 100%;
+      padding: 15px 0;
+      margin: 0;
+      border-radius: 0 0 10px 10px;
+    }
   }
   
   input[type=file] {
@@ -27,6 +38,12 @@ export const Form = styled.form`
     width: 100%;
     padding: 10px;
     border-radius: 10px;
+
+    @media (max-width: 500px) {
+      padding: 12px 0;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+    }
   }
 
   input[disabled],
