@@ -61,8 +61,7 @@ export function App() {
 
         <S.UploadForm method='POST' onSubmit={handleFormSubmit}>
           <input type='file' name='image' />
-          <input type='submit' value='Enviar' />
-          {uploading && 'Enviando...'}
+          <input type='submit' value={uploading ? 'Enviando...' : 'Enviar'} />
         </S.UploadForm>
 
         {loading &&
