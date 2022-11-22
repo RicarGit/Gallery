@@ -1,15 +1,15 @@
 import styled from "styled-components/macro"
 
-export const TrashCan = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
+export const Container = styled.div`
   height: 25px;
   width: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   margin: 20px 15px;
   cursor: pointer;
-
-  .trashCan {
+  
+  .maximize img {
     width: 100%;
   }
 `
