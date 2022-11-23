@@ -1,10 +1,12 @@
 import * as S from './styles'
 import { Card } from 'types/Card'
+import { removeFileExtension } from 'utils/removeFileExtension'
 
 import { TrashCan } from 'components/TrashCan'
 import { FullSizeImage } from 'components/FullSizeImage'
 
 export const PhotoCard = ({ url, name, photos, setPhotos }: Card) => {
+  const fileNameWithoutExtension = removeFileExtension(name)
 
   return (
     <S.Container>
