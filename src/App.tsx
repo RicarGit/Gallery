@@ -15,11 +15,9 @@ export function App() {
 
   const inputSubmit = document.querySelector("input[type=submit]")
 
-  if (inputSubmit && (loading || uploading)) {
-    inputSubmit.setAttribute('disabled', '')
-  } else {
-    inputSubmit?.removeAttribute('disabled')
-  }
+  inputSubmit && (loading || uploading)
+    ? inputSubmit?.setAttribute('disabled', '')
+    : inputSubmit?.removeAttribute('disabled')
 
   useEffect(() => {
     const getPhotos = async () => {
