@@ -1,6 +1,5 @@
 import * as S from './styles'
 import deleteIcon from './delete.svg'
-
 import { api } from 'services/api'
 import { Card } from 'types/Card'
 

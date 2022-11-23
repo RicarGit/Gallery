@@ -48,7 +48,7 @@ export const Form = styled.form`
 
   input[disabled],
   input[disabled]:hover {
-    opacity: .2;
+    opacity: .4;
     cursor: default;
   }
 `

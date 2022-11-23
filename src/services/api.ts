@@ -1,15 +1,12 @@
 import { storage } from "libs/firebase"
 import { ref, listAll, getDownloadURL, uploadBytes, deleteObject } from "firebase/storage"
-
 import { Photo } from "types/Photo"
-import { getFileName } from "utils/getFileName"
 
 export const api = {
   async getAllPhotos() {
     const list: Photo[] = []
-
-    const imagesFolder = ref(storage, 'images')
-    const photoList = await listAll(imagesFolder)
+    const storageRef = ref(storage, 'images')
+    const photoList = await listAll(storageRef)
 
     for (const i in photoList.items) {
       const photoURL = await getDownloadURL(photoList.items[i])
@@ -24,17 +21,16 @@ export const api = {
   },
 
   async insertImage(file: File) {
-    const fileName = getFileName(file)
     const form = document.querySelector('form')
-    const isAValidImageExtension = file.type.match(/\/png$|\/jpg$|\/jpeg$/g)
+    const isValidImageExtension = file.type.match(/(pn|jp|jpe)g$/g)
 
-    if (isAValidImageExtension) {
-      const newFile = ref(storage, `images/${fileName}`)
-
+    if (isValidImageExtension) {
+      const newFile = ref(storage, `images/${file.name}`)
       const upload = await uploadBytes(newFile, file)
       const photoURL = await getDownloadURL(upload.ref)
+
       form?.reset()
-      alert(`Arquivo ${file.name} adicionado com sucesso!`)
+      alert(`Arquivo "${file.name}" adicionado com sucesso!`)
 
       return {
         name: upload.ref.name,
@@ -47,10 +43,10 @@ export const api = {
   },
 
   deleteImage(fileName: string) {
-    const imagesFolder = ref(storage, `images/${fileName}`)
+    const imageRef = ref(storage, `images/${fileName}`)
 
-    deleteObject(imagesFolder)
-      .then(() => alert(`arquivo ${fileName} deletado com sucesso!`))
+    deleteObject(imageRef)
+      .then(() => alert(`arquivo "${fileName}" deletado com sucesso!`))
       .catch(() => alert(`Ops, erro ao deletar arquivo, tente novamente.`))
   }
 }

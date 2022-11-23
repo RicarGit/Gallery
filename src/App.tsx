@@ -1,11 +1,10 @@
 import * as S from './App.styles'
 import { useState, useEffect } from 'react'
 import { Photo } from './types/Photo'
+import { api } from './services/api'
 
 import { PhotoCard } from './components/PhotoCard'
 import { ScreenWarning } from './components/ScreenWarning'
-
-import { api } from './services/api'
 import { UploadForm } from 'components/UploadForm'
 
 export function App() {
