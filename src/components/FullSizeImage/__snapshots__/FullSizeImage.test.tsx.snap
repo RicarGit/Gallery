@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FullSizeImage should match snapshot 1`] = `
+<div
+  class="styles__Container-sc-13z6nlr-0 kEEBKa"
+>
+  <a
+    class="maximize"
+    href="http://www.google.com/google"
+    rel="noreferrer"
+    target="_blank"
+  >
+    <img
+      alt="maximize icon"
+      src="maximize.svg"
+    />
+  </a>
+</div>
+`;
