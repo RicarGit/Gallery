@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react'
-import { FullSizeImage } from '.'
+import { PhotoCard } from '.'
 
-describe('FullSizeImage', () => {
+describe('PhotoCard', () => {
   it('should match snapshot', () => {
     const { container } = render(
-      <FullSizeImage url='http://www.google.com' />
+      <PhotoCard url='www.google.com' name='image-name' photos={[]} setPhotos={() => []} />
     )
 
     expect(container.firstChild).toMatchSnapshot()

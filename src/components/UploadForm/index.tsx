@@ -14,13 +14,13 @@ export const UploadForm = ({ photos, setPhotos, uploading, setUploading }: Uploa
 
     if (file && isFileValid) {
       setUploading(true)
-      let result = await api.insertImage(file)
+      const result = await api.insertImage(file)
       setUploading(false)
 
       if (result instanceof Error) {
         alert(`${result.name} - ${result.message}`)
       } else {
-        let newPhotoList = [...photos]
+        const newPhotoList = [...photos]
 
         newPhotoList.push(result)
         setPhotos(newPhotoList)

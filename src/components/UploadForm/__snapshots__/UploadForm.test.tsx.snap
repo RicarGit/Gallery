@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhotoCard should match snapshot 1`] = `
+<form
+  class="styles__Form-sc-wiyzfq-0 iCRkSN"
+  method="POST"
+>
+  <input
+    name="image"
+    type="file"
+  />
+  <input
+    type="submit"
+    value="Enviar"
+  />
+</form>
+`;

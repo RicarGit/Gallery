@@ -6,7 +6,7 @@ exports[`FullSizeImage should match snapshot 1`] = `
 >
   <a
     class="maximize"
-    href="http://www.google.com/google"
+    href="http://www.google.com"
     rel="noreferrer"
     target="_blank"
   >

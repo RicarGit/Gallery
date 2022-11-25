@@ -1,10 +1,12 @@
 import { render } from '@testing-library/react'
-import { FullSizeImage } from '.'
+import { ScreenWarning } from '.'
 
-describe('FullSizeImage', () => {
+describe('PhotoCard', () => {
   it('should match snapshot', () => {
     const { container } = render(
-      <FullSizeImage url='http://www.google.com' />
+      <ScreenWarning emoji=''>
+        {'children'}
+      </ScreenWarning>
     )
 
     expect(container.firstChild).toMatchSnapshot()

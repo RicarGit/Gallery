@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhotoCard should match snapshot 1`] = `
+<div
+  class="styles__TrashCan-sc-195alnh-0 iiGOar"
+>
+  <img
+    alt="trash icon"
+    class="trashCan"
+    src="delete.svg"
+  />
+</div>
+`;

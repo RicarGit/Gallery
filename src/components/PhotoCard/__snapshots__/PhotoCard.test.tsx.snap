@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhotoCard should match snapshot 1`] = `
+<div
+  class="styles__Container-sc-1tng43f-0 goiXZd"
+>
+  <img
+    alt="Image-name"
+    class="cardImage"
+    src="www.google.com"
+  />
+  <p>
+    Image-name
+  </p>
+  <div
+    class="styles__Container-sc-13z6nlr-0 kEEBKa"
+  >
+    <a
+      class="maximize"
+      href="www.google.com"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="maximize icon"
+        src="maximize.svg"
+      />
+    </a>
+  </div>
+  <div
+    class="styles__TrashCan-sc-195alnh-0 iiGOar"
+  >
+    <img
+      alt="trash icon"
+      class="trashCan"
+      src="delete.svg"
+    />
+  </div>
+</div>
+`;
