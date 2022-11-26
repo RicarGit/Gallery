@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { UploadForm } from '.'
+import { UploadForm } from './UploadForm'
 
 describe('PhotoCard', () => {
   it('should match snapshot', () => {

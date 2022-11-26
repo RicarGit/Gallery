@@ -1,4 +1,4 @@
-import * as S from './styles'
+import * as S from './TrashCan.styled'
 import deleteIcon from './delete.svg'
 import { api } from 'services/api'
 import { Card } from 'types/Card'

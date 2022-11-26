@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { ScreenWarning } from '.'
+import { ScreenWarning } from './ScreenWarning'
 
 describe('PhotoCard', () => {
   it('should match snapshot', () => {

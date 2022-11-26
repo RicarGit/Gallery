@@ -1,4 +1,4 @@
-import * as S from './styles'
+import * as S from './UploadForm.styled'
 import { FormEvent } from 'react'
 import { fileValidator } from 'utils/fileValidator'
 import { api } from 'services/api'

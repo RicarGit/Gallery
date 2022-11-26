@@ -1,4 +1,4 @@
-import * as S from './styles'
+import * as S from './FullSizeImage.styled'
 import maximizeIcon from './maximize.svg'
 
 import { FullSizeImageURL } from 'types/FullSizeImageURL'

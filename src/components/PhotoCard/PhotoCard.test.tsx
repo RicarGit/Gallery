@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { PhotoCard } from '.'
+import { PhotoCard } from './PhotoCard'
 
 describe('PhotoCard', () => {
   it('should match snapshot', () => {

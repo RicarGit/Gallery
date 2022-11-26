@@ -1,11 +1,11 @@
-import * as S from './App.styles'
+import * as S from './App.styled'
 import { useState, useEffect } from 'react'
 import { Photo } from './types/Photo'
 import { api } from './services/api'
 
-import { PhotoCard } from './components/PhotoCard'
-import { ScreenWarning } from './components/ScreenWarning'
-import { UploadForm } from 'components/UploadForm'
+import { PhotoCard } from './components/PhotoCard/PhotoCard'
+import { ScreenWarning } from './components/ScreenWarning/ScreenWarning'
+import { UploadForm } from 'components/UploadForm/UploadForm'
 
 export function App() {
   const [uploading, setUploading] = useState(false)

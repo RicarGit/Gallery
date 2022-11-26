@@ -1,10 +1,10 @@
-import * as S from './styles'
+import * as S from './PhotoCard.styled'
 import { Card } from 'types/Card'
 import { removeFileExtension } from 'utils/removeFileExtension'
 import { capitalizeName } from 'utils/capitalizeName'
 
-import { TrashCan } from 'components/TrashCan'
-import { FullSizeImage } from 'components/FullSizeImage'
+import { TrashCan } from 'components/TrashCan/TrashCan'
+import { FullSizeImage } from 'components/FullSizeImage/FullSizeImage'
 
 export const PhotoCard = ({ url, name, photos, setPhotos }: Card) => {
   const fileNameWithoutExtension = removeFileExtension(name)

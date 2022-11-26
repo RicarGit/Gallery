@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { FullSizeImage } from '.'
+import { FullSizeImage } from './FullSizeImage'
 
 describe('FullSizeImage', () => {
   it('should match snapshot', () => {

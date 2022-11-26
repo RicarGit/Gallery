@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { TrashCan } from '.'
+import { TrashCan } from './TrashCan'
 
 describe('PhotoCard', () => {
   it('should match snapshot', () => {
