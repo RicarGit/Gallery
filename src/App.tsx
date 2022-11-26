@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Photo } from './types/Photo'
 import { api } from './services/api'
 
+import { disableSubmitWhileLoadOrUpload } from 'utils/disableSubmitWhileLoadOrUpload'
 import { PhotoCard, ScreenWarning, UploadForm } from 'components'
 
 export function App() {
@@ -10,11 +11,7 @@ export function App() {
   const [loading, setLoading] = useState(false)
   const [photos, setPhotos] = useState<Photo[]>([])
 
-  const inputSubmit = document.querySelector("input[type=submit]")
-
-  inputSubmit && (loading || uploading)
-    ? inputSubmit?.setAttribute('disabled', '')
-    : inputSubmit?.removeAttribute('disabled')
+  disableSubmitWhileLoadOrUpload(loading, uploading)
 
   useEffect(() => {
     const getPhotos = async () => {

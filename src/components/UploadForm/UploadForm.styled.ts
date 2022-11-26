@@ -11,7 +11,7 @@ export const Form = styled.form`
     flex-direction: column;
   }
 
-  input[type=submit] {
+  button[type=submit] {
     background-color: #756DF4;
     border: none;
     color: #fff;
@@ -46,8 +46,8 @@ export const Form = styled.form`
     }
   }
 
-  input[disabled],
-  input[disabled]:hover {
+  button[disabled],
+  button[disabled]:hover {
     opacity: .4;
     cursor: default;
   }

@@ -31,7 +31,7 @@ export const UploadForm = ({ photos, setPhotos, uploading, setUploading }: Uploa
   return (
     <S.Form method='POST' onSubmit={handleFormSubmit}>
       <input type='file' name='image' />
-      <input type='submit' value={uploading ? 'Enviando...' : 'Enviar'} />
+      <button type='submit'>{uploading ? 'Enviando...' : 'Enviar'}</button>
     </S.Form>
   )
 }
