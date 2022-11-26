@@ -3,9 +3,7 @@ import { useState, useEffect } from 'react'
 import { Photo } from './types/Photo'
 import { api } from './services/api'
 
-import { PhotoCard } from './components/PhotoCard/PhotoCard'
-import { ScreenWarning } from './components/ScreenWarning/ScreenWarning'
-import { UploadForm } from 'components/UploadForm/UploadForm'
+import { PhotoCard, ScreenWarning, UploadForm } from 'components'
 
 export function App() {
   const [uploading, setUploading] = useState(false)
