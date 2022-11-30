@@ -16,10 +16,11 @@
 
 <br>
 
-- input and button styles
-- new features: delete and download files
-- filtered file names: removing extensions, limited length, capitalized names, checking same file name, using RegEx
-- an alert showing some possible errors and sucess when upload or delete a file
+- Input and button styles
+- New features: delete and download files
+- Filtered file names: removing extensions, limited length, capitalized names, checking same file name, using RegEx
+- An alert showing some possible errors and sucess when upload or delete a file
+- Responsivity
 
 <br>
 
