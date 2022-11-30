@@ -1,37 +1,33 @@
-## Available Scripts
+# A Photo Gallery
 
-In the project directory, you can run:
+## Here is an example of the project!
+<img src="public/Galeria-de-fotos.gif" alt="Galeria de fotos" />
 
-### `npm start`
+---
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## And this is the responsivity!
+<img src="public/Galeria-de-fotos-responsiva.gif" alt="Galeria de fotos responsiva" />
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
+<br>
 
-### `npm run build`
+### This project was originally made in B7Web course and modified by me in various aspects, here are some of them:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- input and button styles
+- new features: delete and download files
+- filtered file names: removing extensions, limited length, capitalized names, checking same file name, using RegEx
+- an alert showing some possible errors and sucess when upload or delete a file
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+### This project is using the following technologies:
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- ReactJs
+- Typescript
+- Styled-Components
+- Jest
+- Firebase
