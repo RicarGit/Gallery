@@ -48,5 +48,21 @@ export const api = {
     deleteObject(imageRef)
       .then(() => alert(`arquivo "${fileName}" deletado com sucesso!`))
       .catch(() => alert(`Ops, erro ao deletar arquivo, tente novamente.`))
+  },
+
+  async downloadImage(url: string, name: string) {
+    const response = await fetch(url)
+    const blob = await response.blob()
+    const imageURL = URL.createObjectURL(blob)
+
+    const link = document.createElement('a')
+
+    link.href = imageURL
+    link.download = name
+    document.body.appendChild(link)
+
+    link.click()
+    URL.revokeObjectURL(imageURL)
+    link.remove()
   }
 }
