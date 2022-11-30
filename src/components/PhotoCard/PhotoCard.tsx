@@ -3,8 +3,8 @@ import { Card } from 'types/Card'
 import { removeFileExtension } from 'utils/removeFileExtension'
 import { capitalizeName } from 'utils/capitalizeName'
 
-import { TrashCan } from 'components/TrashCan/TrashCan'
-import { FullSizeImage } from 'components/FullSizeImage/FullSizeImage'
+import { TrashCan } from 'components/TrashCan'
+import { Download } from 'components/Download'
 
 export const PhotoCard = ({ url, name, photos, setPhotos }: Card) => {
   const fileNameWithoutExtension = removeFileExtension(name)
@@ -14,7 +14,7 @@ export const PhotoCard = ({ url, name, photos, setPhotos }: Card) => {
     <S.Container>
       <img className='cardImage' src={url} alt={capitalizedFileName} />
       <p>{capitalizedFileName}</p>
-      <FullSizeImage url={url} />
+      <Download url={url} name={name} />
       <TrashCan name={name} photos={photos} setPhotos={setPhotos} />
     </S.Container>
   )

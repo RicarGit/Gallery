@@ -1,4 +1,4 @@
-export * from './FullSizeImage'
+export * from './Download'
 export * from './PhotoCard'
 export * from './ScreenWarning'
 export * from './TrashCan'

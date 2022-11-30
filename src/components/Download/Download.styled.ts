@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin: 20px 15px;
   cursor: pointer;
   
-  .maximize img {
+  .download img {
     width: 100%;
   }
 `
