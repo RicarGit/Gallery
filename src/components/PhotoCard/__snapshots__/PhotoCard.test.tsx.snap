@@ -2,7 +2,7 @@
 
 exports[`PhotoCard should match snapshot 1`] = `
 <div
-  class="styles__Container-sc-1tng43f-0 goiXZd"
+  class="PhotoCardstyled__Container-sc-mpou7f-0 guwiQZ"
 >
   <img
     alt="Image-name"
@@ -13,22 +13,19 @@ exports[`PhotoCard should match snapshot 1`] = `
     Image-name
   </p>
   <div
-    class="styles__Container-sc-13z6nlr-0 kEEBKa"
+    class="Downloadstyled__Container-sc-9k28x7-0 ezUDzu"
   >
-    <a
-      class="maximize"
-      href="www.google.com"
-      rel="noreferrer"
-      target="_blank"
+    <div
+      class="download"
     >
       <img
-        alt="maximize icon"
-        src="maximize.svg"
+        alt="download icon"
+        src="download.svg"
       />
-    </a>
+    </div>
   </div>
   <div
-    class="styles__TrashCan-sc-195alnh-0 iiGOar"
+    class="TrashCanstyled__TrashCan-sc-i65z8w-0 eBYaF"
   >
     <img
       alt="trash icon"

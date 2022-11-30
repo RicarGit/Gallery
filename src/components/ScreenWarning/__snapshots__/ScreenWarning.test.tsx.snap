@@ -2,7 +2,7 @@
 
 exports[`PhotoCard should match snapshot 1`] = `
 <div
-  class="styles__ScreenWarning-sc-fntcj7-0 iTYUCJ"
+  class="ScreenWarningstyled__ScreenWarning-sc-1v9tbg9-0 zmBAE"
 >
   <div
     class="emoji"

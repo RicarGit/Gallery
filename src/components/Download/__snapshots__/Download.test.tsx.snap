@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Download should match snapshot 1`] = `
+<div
+  class="Downloadstyled__Container-sc-9k28x7-0 ezUDzu"
+>
+  <div
+    class="download"
+  >
+    <img
+      alt="download icon"
+      src="download.svg"
+    />
+  </div>
+</div>
+`;

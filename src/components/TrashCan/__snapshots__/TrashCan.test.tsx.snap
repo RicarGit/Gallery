@@ -2,7 +2,7 @@
 
 exports[`PhotoCard should match snapshot 1`] = `
 <div
-  class="styles__TrashCan-sc-195alnh-0 iiGOar"
+  class="TrashCanstyled__TrashCan-sc-i65z8w-0 eBYaF"
 >
   <img
     alt="trash icon"

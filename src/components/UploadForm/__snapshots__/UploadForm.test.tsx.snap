@@ -2,16 +2,17 @@
 
 exports[`PhotoCard should match snapshot 1`] = `
 <form
-  class="styles__Form-sc-wiyzfq-0 iCRkSN"
+  class="UploadFormstyled__Form-sc-1ko9qvo-0 cabpql"
   method="POST"
 >
   <input
     name="image"
     type="file"
   />
-  <input
+  <button
     type="submit"
-    value="Enviar"
-  />
+  >
+    Enviar
+  </button>
 </form>
 `;
