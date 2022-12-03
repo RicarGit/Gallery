@@ -1,5 +1,9 @@
 import * as S from './ScreenWarning.styled'
-import { Warning } from 'types/Warning'
+
+export type Warning = {
+  emoji: string
+  children: string
+}
 
 export const ScreenWarning = ({ emoji, children }: Warning) => {
   return (

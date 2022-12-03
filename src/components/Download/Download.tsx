@@ -1,8 +1,11 @@
 import * as S from './Download.styled'
 import downloadIcon from './download.svg'
-
-import { DownloadImage } from 'types/DownloadImage'
 import { api } from 'services/api'
+
+export type DownloadImage = {
+  url: string
+  name: string
+}
 
 export const Download = ({ url, name }: DownloadImage) => {
   return (

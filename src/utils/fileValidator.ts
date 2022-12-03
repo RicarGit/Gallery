@@ -1,5 +1,12 @@
-import { Validate } from "types/Validate"
+import { FormEvent } from "react"
+import { Photo } from "types/Photo"
 import { removeFileExtension } from "./removeFileExtension"
+
+export type Validate = {
+  file: File
+  photos: Photo[]
+  event: FormEvent<HTMLFormElement>
+}
 
 export const fileValidator = ({ file, photos, event }: Validate) => {
   const fileNameWithoutExtension = removeFileExtension(file.name)

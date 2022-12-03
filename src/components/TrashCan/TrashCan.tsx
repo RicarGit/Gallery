@@ -3,7 +3,6 @@ import deleteIcon from './delete.svg'
 import { api } from 'services/api'
 import { Card } from 'types/Card'
 
-
 export const TrashCan = ({ name, photos, setPhotos }: Omit<Card, 'url'>) => {
   const handleDeleteImage = () => {
     const filteredPhotos = photos.filter(photo => photo.name !== name)
