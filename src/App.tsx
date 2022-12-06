@@ -3,15 +3,12 @@ import { useState, useEffect } from 'react'
 import { Photo } from './types/Photo'
 import { api } from './services/api'
 
-import { disableSubmitWhileLoadOrUpload } from 'utils/disableSubmitWhileLoadOrUpload'
 import { PhotoCard, ScreenWarning, UploadForm } from 'components'
 
 export function App() {
   const [uploading, setUploading] = useState(false)
   const [loading, setLoading] = useState(false)
   const [photos, setPhotos] = useState<Photo[]>([])
-
-  disableSubmitWhileLoadOrUpload(loading, uploading)
 
   useEffect(() => {
     const getPhotos = async () => {
@@ -31,6 +28,7 @@ export function App() {
         <UploadForm
           photos={photos}
           setPhotos={setPhotos}
+          loading={loading}
           uploading={uploading}
           setUploading={setUploading}
         />

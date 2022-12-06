@@ -10,11 +10,12 @@ import { api } from 'services/api'
 export type Upload = {
   photos: Photo[]
   setPhotos: React.Dispatch<SetStateAction<Photo[]>>
+  loading: boolean
   uploading: boolean
   setUploading: React.Dispatch<SetStateAction<boolean>>
 }
 
-export const UploadForm = ({ photos, setPhotos, uploading, setUploading }: Upload) => {
+export const UploadForm = ({ photos, setPhotos, loading, uploading, setUploading }: Upload) => {
   const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
@@ -37,6 +38,16 @@ export const UploadForm = ({ photos, setPhotos, uploading, setUploading }: Uploa
       }
     }
   }
+
+  const disableSubmitWhileLoadOrUpload = () => {
+    const submitButton = document.querySelector("button[type=submit]")
+
+    submitButton && (loading || uploading)
+      ? submitButton.setAttribute('disabled', '')
+      : submitButton?.removeAttribute('disabled')
+  }
+
+  disableSubmitWhileLoadOrUpload()
 
   return (
     <S.Form method='POST' onSubmit={handleFormSubmit}>
